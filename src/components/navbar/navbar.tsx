@@ -97,10 +97,10 @@ export default function NavBar() {
             Skills
           </a>
           <a
-          href="#home" 
+          href="#About" 
           onClick={(e) => {
             e.preventDefault();
-            scrollToSection("home");
+            scrollToSection("About");
           }}
             className="text-sm font-semibold font-poppin  leading-6 tracking-wide text-white hover:bg-next p-2 rounder rounded-lg hover:underline hover:decoration-sky-500"
           >
@@ -136,7 +136,7 @@ export default function NavBar() {
         <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-next px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
             <a href="#" className="-m-1.5 p-1.5">
-              <span className="sr-only">Your Company</span>
+              <span className="sr-only">My Portfolio</span>
               <img
                 className="h-8 w-auto"
                 src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
@@ -158,7 +158,15 @@ export default function NavBar() {
                 <Disclosure as="div" className="-mx-3">
                   <>
                     <Disclosure.Button className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold font-poppin leading-7 text-white hover:bg-darkLow">
-                      Home
+                    <a
+              href="#home" 
+              onClick={(e) => {
+                e.preventDefault();
+                scrollToSection("home");
+              }}
+              className="flex items-center p-2 text-sm font-semibold font-poppin leading-6 tracking-wide text-white hover:underline hover:decoration-sky-500"
+            >Home
+            </a>
                     </Disclosure.Button>
                   </>
                 </Disclosure>

@@ -3,7 +3,7 @@ import tag from "../../assets/images/tag.png";
 
 const About = () => {
   return (
-    <div className="bg-black flex items-center justify-center overflow-hidden z-50">
+    <div id="About" className="bg-black flex items-center justify-center overflow-hidden z-50">
       <div className="relative mx-auto h-full px-4 pb-20 md:pb-10 sm:max-w-xl md:max-w-full md:px-24 lg:max-w-screen-xl lg:px-8">
         <div className="flex flex-col items-center justify-between lg:flex-row py-16">
           <div className="relative ">
@@ -20,7 +20,7 @@ const About = () => {
                 About
               </h1>
               <h2 className="mb-6 max-w-lg text-5xl text-white font-great-vibes leading-snug tracking-tight text-g1 sm:text-7xl sm:leading-snug">
-                i am <span className="underline text-blue-400  decoration-slate-600 cursor-pointer"> React</span> a
+                i am a <span className="underline text-blue-400  decoration-slate-600 cursor-pointer"> React</span> 
                 <span className="my-1 text-gray-300 inline-block border-b-8 border-gray-900 bg-next px-4 font-bold text-g4 animate__animated animate__flash">
                   Developer
                 </span>
