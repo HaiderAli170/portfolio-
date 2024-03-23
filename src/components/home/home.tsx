@@ -45,7 +45,7 @@ export default function Home() {
 
   return (
     <div className="bg-darkLow lg:px-4  " id="home">
-      <div className="mx-auto max-w-2xl lg:px-5 md:px-2 sm:px-2  px-4  py-20 sm:py-12 lg:grid lg:max-w-7xl lg:grid-cols-2 lg:gap-x-14 ">
+      <div className="mx-auto max-w-2xl lg:px-5 md:px-2 sm:px-2  px-4  py-20 sm:py-20 md:py-20 lg:grid lg:max-w-7xl lg:grid-cols-2 lg:gap-x-14 ">
         {/* Product details */}
         <div className="lg:max-w-lg lg:self-end ">
           <nav aria-label="Breadcrumb">
