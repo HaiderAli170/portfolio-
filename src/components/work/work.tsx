@@ -42,7 +42,7 @@ const cardVariants = {
   },
   hidden: {
     opacity: 1,
-    scale: 0.6,
+    scale: 0.5,
     transition: { duration: 0.5, ease: "easeIn" },
   },
 };
@@ -120,7 +120,7 @@ export default function Example() {
               initial="hidden"
               animate={controls}
               onClick={() => NavigateToProfile(card.url)}
-              className="flex gap-x-4 rounded-xl bg-white/5 p-3 ring-1 ring-inset ring-white/10 hover:bg-darkLow cursor-pointer"
+              className=" flex gap-x-4 rounded-xl bg-white/5 p-3 ring-1 ring-inset ring-white/10 hover:bg-darkLow cursor-pointer"
             >
               <card.icon
                 className="h-7 w-5 flex-none text-indigo-400"
