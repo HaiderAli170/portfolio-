@@ -33,7 +33,7 @@ const About = () => {
               </div>
             </div>
           </div>
-          <div className="relative  hidden lg:ml-32 lg:block lg:w-1/2">
+          <div className="relative   lg:ml-32 lg:block lg:w-1/2">
             <img src={programer} alt="Showcase" className="abg-orange-400 shadow-2xl shadow-slate-700 opacity-75  mx-auto w-fit overflow-hidden rounded-[22rem] rounded-br-none rounded-tl-none"/>
           </div>
         </div>
