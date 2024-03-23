@@ -44,8 +44,8 @@ export default function Home() {
   const [selectedSize, setSelectedSize] = useState(profile.sizes[0]);
 
   return (
-    <div className="bg-darkLow px-4" id="home">
-      <div className="mx-auto max-w-2xl lg:px-5 md:px-2 sm:px-2  px-2  py-12 sm:py-12 lg:grid lg:max-w-7xl lg:grid-cols-2 lg:gap-x-14 ">
+    <div className="bg-darkLow lg:px-4  " id="home">
+      <div className="mx-auto max-w-2xl lg:px-5 md:px-2 sm:px-2  px-4  py-20 sm:py-12 lg:grid lg:max-w-7xl lg:grid-cols-2 lg:gap-x-14 ">
         {/* Product details */}
         <div className="lg:max-w-lg lg:self-end ">
           <nav aria-label="Breadcrumb">
