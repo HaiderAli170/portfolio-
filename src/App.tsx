@@ -5,6 +5,8 @@ import "./style.css";
 import Example from "./components/work/work";
 import Skills from "./components/skills/skill";
 import About from "./components/about/about";
+import Contact from "./components/contact/contact";
+import Footer from "./components/footer/footer";
 function App() {
   const { scrollYProgress } = useScroll();
   return (
@@ -16,6 +18,8 @@ function App() {
         <Example />
         <Skills/>
         <About/>
+        <Contact/>
+        <Footer/>
       </div>
     </>
   );

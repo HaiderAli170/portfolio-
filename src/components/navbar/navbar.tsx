@@ -109,10 +109,10 @@ export default function NavBar() {
         </Popover.Group>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <a
-           href="#home" 
+           href="#contact" 
            onClick={(e) => {
              e.preventDefault();
-             scrollToSection("home");
+             scrollToSection("contact");
            }}
             className="text-sm underline  flex font-semibold leading-6  tracking-wide text-white hover:bg-next p-2 rounder rounded-lg hover:underline hover:decoration-sky-500"
           >
