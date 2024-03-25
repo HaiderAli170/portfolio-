@@ -2,8 +2,6 @@ import { FaGithub } from "react-icons/fa";
 import metro from "../../assets/images/metro.png";
 import radio from "../../assets/images/radionumbers.png";
 import fireflytime from "../../assets/images/fireflytime.jpg";
-import { motion, useAnimation, useInView } from "framer-motion";
-import { useRef, useEffect } from "react";
 
 const cards = [
   {
@@ -34,30 +32,11 @@ const cards = [
 const NavigateToProfile = (url: any) => {
   window.open(url, "_blank");
 };
-const cardVariants = {
-  visible: {
-    opacity: 1,
-    scale: 1,
-    transition: { duration: 0.7, ease: "easeOut" },
-  },
-  hidden: {
-    opacity: 1,
-    scale: 0.5,
-    transition: { duration: 0.5, ease: "easeIn" },
-  },
-};
 
 
 export default function Example() {
-  const controls = useAnimation();
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
 
-  useEffect(() => {
-    if (isInView) {
-      controls.start("visible");
-    }
-  }, [isInView]);
+ 
  
   return (
     <div
@@ -109,41 +88,28 @@ export default function Example() {
             user-centric solutions.
           </p>
         </div>
-        <div
-          ref={ref}
-          className="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-6 sm:mt-10 lg:mx-0 lg:max-w-none lg:grid-cols-3 lg:gap-8"
-        >
-          {cards.map((card) => (
-            <motion.div
-              key={card.name}
-              variants={cardVariants}
-              initial="hidden"
-              animate={controls}
-              onClick={() => NavigateToProfile(card.url)}
-              className=" flex gap-x-4 rounded-xl bg-white/5 p-3 ring-1 ring-inset ring-white/10 hover:bg-darkLow cursor-pointer"
-            >
-              <card.icon
-                className="h-7 w-5 flex-none text-indigo-400"
-                aria-hidden="true"
-              />
-              <div className="text-base leading-7">
-                <h3 className="font-semibold text-white font-poppin tracking-wide hover:underline hover:decoration-sky-500">
-                  {card.name}
-                </h3>
-                <p className="mt-2 text-gray-300 font-poppin tracking-wide">
-                  {card.description}
-                </p>
-                {card.image && (
-                  <img
-                    src={card.image}
-                    alt={card.name}
-                    className="mt-2 rounded-md opacity-55 w-1/2 h-1/3"
-                  />
-                )}
-              </div>
-            </motion.div>
-          ))}
-        </div>
+        <div className="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-6 sm:mt-10 lg:mx-0 lg:max-w-none lg:grid-cols-3 lg:gap-8">
+        {cards.map((card) => (
+          <div
+            key={card.name}
+            onClick={() => NavigateToProfile(card.url)}
+            className=" transition ease-in-out delay-150 duration-700 hover:-translate-y-1 flex gap-x-4 rounded-xl bg-white/5 p-3 ring-1 ring-inset ring-white/10 hover:bg-darkLow cursor-pointer"
+          >
+            <card.icon className="h-7 w-5 flex-none text-indigo-400" aria-hidden="true" />
+            <div className="text-base leading-7">
+              <h3 className="font-semibold text-white font-poppin tracking-wide hover:underline hover:decoration-sky-500">
+                {card.name}
+              </h3>
+              <p className="mt-2 text-gray-300 font-poppin tracking-wide">
+                {card.description}
+              </p>
+            
+                <img src={card.image} alt={card.name} className="mt-2 rounded-md opacity-55 w-1/2 h-1/3" />
+              
+            </div>
+          </div>
+        ))}
+      </div>
       </div>
     </div>
   );

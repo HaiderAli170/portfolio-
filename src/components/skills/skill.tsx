@@ -15,7 +15,7 @@ const people = [
   {
     name: 'Java Script',
     title: 'Programming language',
-    role: '1 Year Experience',
+    role: '1.5 Year Experience',
     imageUrl:javascript,
   },
   {

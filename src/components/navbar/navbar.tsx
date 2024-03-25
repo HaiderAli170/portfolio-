@@ -35,7 +35,7 @@ export default function NavBar() {
   };
   return (
     <header
-      className={`fixed top-0 left-0 w-full z-50 bg-darkLow ${
+      className={`fixed top-0 left-0 w-full min-w-0 z-50 bg-darkLow ${
         hasScrolled ? "bg-transparent shadow-sm" : ""
       } transition duration-300 ease-in-out`}
     >
@@ -122,7 +122,7 @@ export default function NavBar() {
             >
               <MdContactMail size={18} />
             </span>
-            Contact
+            Let's Connect
           </a>
         </div>
       </nav>
@@ -134,12 +134,12 @@ export default function NavBar() {
       >
         <div className="fixed inset-0 z-10" />
         <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-next px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
-          <div className="flex items-center justify-between">
+          <div className="flex items-center text-white justify-between">
             <a href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">My Portfolio</span>
               <img
                 className="h-8 w-auto"
-                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+                src={image}
                 alt=""
               />
             </a>
@@ -163,27 +163,43 @@ export default function NavBar() {
               onClick={(e) => {
                 e.preventDefault();
                 scrollToSection("home");
+                setMobileMenuOpen(false);
               }}
-              className="flex items-center p-2 text-sm font-semibold font-poppin leading-6 tracking-wide text-white hover:underline hover:decoration-sky-500"
+              className="flex items-center  text-sm font-semibold font-poppin leading-6 tracking-wide text-white hover:underline hover:decoration-sky-500"
             >Home
             </a>
                     </Disclosure.Button>
                   </>
                 </Disclosure>
                 <a
-                  href="#"
+                  href="#work" 
+              onClick={(e) => {
+                e.preventDefault();
+                scrollToSection("work");
+                setMobileMenuOpen(false);
+              }}
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 font-poppin text-white hover:bg-darkLow"
                 >
                   Work
                 </a>
                 <a
-                  href="#"
+                  href="#skill" 
+              onClick={(e) => {
+                e.preventDefault();
+                scrollToSection("skill");
+                setMobileMenuOpen(false);
+              }}
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 font-poppin text-white  hover:bg-darkLow"
                 >
                   SKills
                 </a>
                 <a
-                  href="#"
+                  href="#About" 
+              onClick={(e) => {
+                e.preventDefault();
+                scrollToSection("About");
+                setMobileMenuOpen(false);
+              }}
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 font-poppin text-white  hover:bg-darkLow"
                 >
                   About
