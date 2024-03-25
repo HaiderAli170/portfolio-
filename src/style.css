@@ -7,6 +7,21 @@
     background: rgb(239, 117, 127);
     z-index: 1000; /* Ensure it's above other content */
     transform-origin: left center;
-  }
+  }/* Style the scrollbar itself (background) */
+::-webkit-scrollbar {
+  width: 12px; /* or any desired width */
+  background-color: #4b4444; /* light grey background */
+}
+
+/* Style the scrollbar thumb (the part you drag) */
+::-webkit-scrollbar-thumb {
+  background-color: #ad5ccd; /* dark grey thumb */
+  border-radius: 6px; /* rounded corners for the thumb */
+}
+
+/* (Optional) Style the scrollbar thumb on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8; /* slightly darker grey on hover */
+}
 
   

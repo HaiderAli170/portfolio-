@@ -9,6 +9,7 @@ import Contact from "./components/contact/contact";
 import Footer from "./components/footer/footer";
 function App() {
   const { scrollYProgress } = useScroll();
+  
   return (
     <>
       <motion.div className="progress-bar" style={{ scaleX: scrollYProgress ,originX: 0 }} />
